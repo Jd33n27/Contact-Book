@@ -6,7 +6,7 @@ A comprehensive guide explaining the What, Why, Who, Where, When, and How of the
 
 ## What?
 
-**The Contact Manager** is a command-line contact management application built in Go that allows users to store, organize, and manage personal contact information.
+**The Contact Book** is a command-line contact management application built in Go that allows users to store, organize, and manage personal contact information.
 
 ### Core Functionality:
 
@@ -147,24 +147,24 @@ Application Terminates
 The application uses a **layered architecture** pattern:
 
 ```
-┌─────────────────────────────┐
+┌──────────────────────────────┐
 │   Main (CLI Menu Loop)       │  - Presents options
 │       main.go                │  - Routes user input
-└──────────────┬──────────────┘
+└──────────────┬───────────────┘
                │
-┌──────────────▼─────────────────────┐
-│  Operations Layer                  │  - Business Logic
+┌──────────────▼──────────────────────┐
+│  Operations Layer                   │  - Business Logic
 │  (Add, List, Edit, Delete)          │
 │  operations.go                      │
 └──────────────┬──────────────────────┘
                │
     ┌──────────┴──────────┬──────────────┐
     │                     │              │
-┌───▼────────┐  ┌────────▼────────┐  ┌──▼──────────────┐
-│ Validators │  │ CLI Input       │  │ Storage         │
-│ validator. │  │ cli.go          │  │ storage.go      │
-│ go         │  │ GetInput()      │  │ Load/Save       │
-└────────────┘  └─────────────────┘  └─────────────────┘
+┌───▼────────┐  ┌────────▼────────┐  ┌─▼───────────────┐
+│ Validators │  │ CLI Input       │  │ Storage          │
+│ validator. │  │ cli.go          │  │ storage.go       │
+│ go         │  │ GetInput()      │  │ Load/Save        │
+└────────────┘  └─────────────────┘  └──────────────────┘
                           │
                 ┌─────────▼──────────┐
                 │  Data Layer        │
@@ -260,7 +260,7 @@ Then interact with the menu by entering numbers 1-5 to manage your contacts.
 
 ---
 
-## Future Enhancements
+<!--## Future Enhancements
 
 Potential improvements to the application:
 
@@ -271,5 +271,5 @@ Potential improvements to the application:
 5. **Database** - Replace JSON with a database system
 6. **Web Interface** - Create a REST API and web UI
 7. **Sync** - Cloud synchronization across devices
-8. **Backup** - Automatic backup and recovery features
+8. **Backup** - Automatic backup and recovery features-->
 
